@@ -19,6 +19,10 @@ namespace Tarea8Parcial2
     		builder.Logging.AddDebug();
 #endif
 
+#if ANDROID
+            Platforms.Android.WebViewHandlerConfig.ConfigureWebView();
+#endif
+
             return builder.Build();
         }
     }
